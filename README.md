@@ -1,7 +1,7 @@
 # FindYourHat
  JavaScript Text Game
 
-#### replit:
+#### Replit:
 https://replit.com/@Kin-TingTing/Find-Your-Hat#index.js
 
 #### 簡易教學:

@@ -80,14 +80,18 @@ output結果：<br>
 ░O░░<br>
 ░░^O<br>
 ░░░░<br>
-     a. 移動（__第2步已做__）<br>
-     b. __檢查座標是O/^，設置輸贏條件 ← 新增__<br>
-     c. 座標不是O和^，（__第6步已做__）<br>
-     
-8. <br>
-     a. 設4個0至array.length-1的隨機數（以上為0-3），例如a、b、c、d<br>
-     b. 設e儲存座標內容<br>
-          i. e儲存array[a][b]<br>
-          ii. array[a][b]換成array[c][d]<br>
-          iii. array[c][d]換成e<br>
-     c. __以上8的a、b步驟循環至少16次__
+    a. 移動（__第2步已做__）<br>
+    b. __檢查座標是O/^，設置輸贏條件 ← 新增__<br>
+    c. 座標不是O和^，（__第6步已做__）<br>
+    
+8. 設定隨機地圖<br>
+   a. 設4個0至array.length-1的隨機數（以上為0-3），例如a、b、c、d<br>
+   <details><summary>b. 設e儲存座標內容<br></summary>
+       <p>
+       i.   e儲存array[a][b]<br>
+       ii.  array[a][b]換成array[c][d]<br>
+       iii. array[c][d]換成e
+       </p>
+   </details>
+   
+   c. __以上8的a、b步驟循環至少16次__

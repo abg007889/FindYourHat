@@ -2,6 +2,7 @@
  JavaScript Text Game
 
 #### Game Website:
+https://abg007889.github.io/FindYourHat/
 
 #### Replit:
 https://replit.com/@Kin-TingTing/Find-Your-Hat

@@ -1,8 +1,10 @@
 # FindYourHat
  JavaScript Text Game
 
+#### Game Website:
+
 #### Replit:
-https://replit.com/@Kin-TingTing/Find-Your-Hat#index.js
+https://replit.com/@Kin-TingTing/Find-Your-Hat
 
 #### 簡易教學:
 https://docs.google.com/document/d/1TuOO3Mp-w71nr6FtZCeABUTBkZy6ASNjGVf0egCZHDs/edit?usp=sharing

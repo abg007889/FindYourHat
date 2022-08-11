@@ -1,0 +1,58 @@
+* {
+	font-family: 'Comic Sans MS';
+}
+
+body {
+	background-color: rgb(40, 40, 40);
+}
+
+footer {
+	background-color: #fffafa;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.map {
+	border: 6px dotted pink;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: #fffafa;
+}
+
+.images {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	text-align: right;
+}
+
+.copyright {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+#text {
+	display: flex;
+	justify-content: center;
+	color: #fffafa;
+}

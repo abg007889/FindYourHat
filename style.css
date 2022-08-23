@@ -11,12 +11,56 @@ body {
 		width: 30px;
 		height: 30px;
 	}
+
+	#btnW {
+		font-size: 30px;
+		padding: 0 12px;
+		color: #282828;
+		background-color: pink;
+		border-radius: 50%;
+	}
+
+	#btnA,
+	#btnS,
+	#btnD {
+		font-size: 30px;
+		padding: 0 14px;
+		color: #282828;
+		background-color: pink;
+		border-radius: 50%;
+	}
 }
 
 @media only screen and (min-width: 666px) {
 	.img {
 		width: 50px;
 		height: 50px;
+	}
+
+	.boxBtn {
+		color: #282828;
+		background-color: pink;
+		border-radius: 50%;
+	}
+}
+
+@media only screen and (min-height: 780px) {
+	#btnW {
+		font-size: 30px;
+		padding: 0 12px;
+		color: #282828;
+		background-color: pink;
+		border-radius: 50%;
+	}
+
+	#btnA,
+	#btnS,
+	#btnD {
+		font-size: 30px;
+		padding: 0 14px;
+		color: #282828;
+		background-color: pink;
+		border-radius: 50%;
 	}
 }
 
@@ -77,10 +121,4 @@ a {
 #text {
 	color: #fffafa;
 	margin: 8px;
-}
-
-.boxBtn {
-	color: #282828;
-	background-color: pink;
-	border-radius: 20px;
 }

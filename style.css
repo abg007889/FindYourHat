@@ -7,10 +7,6 @@ body {
 }
 
 @media only screen and (max-width: 666px) {
-	footer * {
-		display: none;
-	}
-
 	.img {
 		width: 30px;
 		height: 30px;
@@ -40,7 +36,7 @@ body {
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-		padding-top: 5px;
+		font-size: 13px;
 	}
 }
 
@@ -49,6 +45,7 @@ a {
 }
 
 .images {
+	padding-top: 5px;
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
@@ -79,19 +76,11 @@ a {
 
 #text {
 	color: #fffafa;
+	margin: 8px;
 }
 
-#boxBtn {
+.boxBtn {
 	color: #282828;
 	background-color: pink;
 	border-radius: 20px;
-	padding: 3px 6px;
-}
-
-#inputBox {
-	text-align: center;
-	color: #fffafa;
-	background-color: #282828;
-	border-radius: 20px;
-	width: 20px;
 }

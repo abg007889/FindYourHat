@@ -2,12 +2,6 @@ let arrImg = ["img/wall.png", "img/road.png", "img/walk.png", "img/hat.png", "im
 let end = false, map = [], x, y;
 document.addEventListener("keydown", direction);
 var txt = document.getElementById('text');
-var boxBtn = document.getElementById('boxBtn');
-
-boxBtn.addEventListener('click', () => {
-  document.getElementById('inputBox').hidden = false;
-  boxBtn.hidden = true;
-}, false)
 
 // After win or lose
 function newGame() {
@@ -90,7 +84,6 @@ GenerateMap();
 // Direction and check win or lose
 function direction(e) {
   if (end) e.keydown(newGame());  // it will start newGame function if win or lose
-  if (inputBox.value) inputBox.value = '';
   if (e.code === 'KeyA') {
     if (y != 0) {
       y -= 1;
@@ -199,4 +192,118 @@ function direction(e) {
     else
       txt.innerHTML = "There is a wall that is block your way.";
   }
+}
+
+function clickW() {
+  if (x != 0) {
+    x -= 1;
+    //console.log(map[x][y]);
+    if (map[x][y] === 'hat') {
+      txt.innerHTML = "You find your hat!!!";
+      document.getElementById(`${x}${y}`).src = arrImg[3];
+      end = true;
+    } else if (map[x][y] === 'hole') {
+      txt.innerHTML = "You fall into the hole, you die!";
+      map[x + 1][y] = 'path';
+      document.getElementById(`${x + 1}${y}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[5];
+      end = true;
+    } else if (map[x][y] === 'wall') {
+      x += 1;
+      txt.innerHTML = "There is a wall that is block your way.";
+    } else {
+      map[x + 1][y] = 'path';
+      document.getElementById(`${x + 1}${y}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[2];
+      map[x][y] = 'player';
+    }
+  }
+  else
+    txt.innerHTML = "There is a wall that is block your way.";
+}
+
+function clickA() {
+  if (end) newGame();  // it will start newGame function if win or lose
+    if (y != 0) {
+      y -= 1;
+      //console.log(map[x][y]);
+      if (map[x][y] === 'hat') {
+        txt.innerHTML = "You find your hat!!!";
+        document.getElementById(`${x}${y}`).src = arrImg[3];
+        end = true;
+      } else if (map[x][y] === 'hole') {
+        txt.innerHTML = "You fall into the hole, you die!";
+        map[x][y + 1] = 'path';
+        document.getElementById(`${x}${y + 1}`).src = arrImg[4];
+        document.getElementById(`${x}${y}`).src = arrImg[5];
+        end = true;
+      } else if (map[x][y] === 'wall') {
+        y += 1;
+        txt.innerHTML = "There is a wall that is block your way.";
+      } else {
+        map[x][y + 1] = 'path';
+        document.getElementById(`${x}${y + 1}`).src = arrImg[4];
+        document.getElementById(`${x}${y}`).src = arrImg[2];
+        map[x][y] = 'player';
+      }
+    }
+    else
+      txt.innerHTML = "There is a wall that is block your way.";
+}
+
+function clickS() {
+  if (x < 9) {
+    x += 1;
+    //console.log(map[x][y]);
+    if (map[x][y] === 'hat') {
+      txt.innerHTML = "You find your hat!!!";
+      document.getElementById(`${x}${y}`).src = arrImg[3];
+      end = true;
+    } else if (map[x][y] === 'hole') {
+      txt.innerHTML = "You fall into the hole, you die!";
+      map[x - 1][y] = 'path';
+      document.getElementById(`${x - 1}${y}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[5];
+      end = true;
+    } else if (map[x][y] === 'wall') {
+      x -= 1;
+      txt.innerHTML = "There is a wall that is block your way.";
+    } else {
+      map[x - 1][y] = 'path';
+      document.getElementById(`${x - 1}${y}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[2];
+      map[x][y] = 'player';
+    }
+  }
+  else
+    txt.innerHTML = "There is a wall that is block your way.";
+}
+
+function clickD() {
+  if (end) newGame();  // it will start newGame function if win or lose
+  if (y < 9) {
+    y += 1;
+    //console.log(map[x][y]);
+    if (map[x][y] === 'hat') {
+      txt.innerHTML = "You find your hat!!!";
+      document.getElementById(`${x}${y}`).src = arrImg[3];
+      end = true;
+    } else if (map[x][y] === 'hole') {
+      txt.innerHTML = "You fall into the hole, you die!";
+      map[x][y - 1] = 'path';
+      document.getElementById(`${x}${y - 1}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[5];
+      end = true;
+    } else if (map[x][y] === 'wall') {
+      y -= 1;
+      txt.innerHTML = "There is a wall that is block your way.";
+    } else {
+      map[x][y - 1] = 'path';
+      document.getElementById(`${x}${y - 1}`).src = arrImg[4];
+      document.getElementById(`${x}${y}`).src = arrImg[2];
+      map[x][y] = 'player';
+    }
+  }
+  else
+    txt.innerHTML = "There is a wall that is block your way.";
 }

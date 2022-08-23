@@ -2,12 +2,6 @@ let arrImg = ["img/wall.png", "img/road.png", "img/walk.png", "img/hat.png", "im
 let end = false, map = [], x, y;
 document.addEventListener("keydown", direction);
 var txt = document.getElementById('text');
-var boxBtn = document.getElementById('boxBtn');
-
-boxBtn.addEventListener('click', () => {
-  document.getElementById('inputBox').hidden = false;
-  boxBtn.hidden = true;
-}, false)
 
 // After win or lose
 function newGame() {
@@ -73,13 +67,13 @@ function GenerateMap() {
   for (let i = 0; i < map.length; i++) {
     for (let j = 0; j < map.length; j++) {
       if (map[i][j] === 'wall')
-        $(".map").append(`<img id='${i}${j}' src=${arrImg[0]} class='img' alt='wall'>`);
+        $(".map").append(`<img id='${i}${j}' src=${arrImg[0]} alt='wall' width='50' height='50'>`);
       if (map[i][j] === 'road')
-        $(".map").append(`<img id='${i}${j}' src=${arrImg[1]} class='img' alt='road'>`);
+        $(".map").append(`<img id='${i}${j}' src=${arrImg[1]} alt='road' width='50' height='50'>`);
       if (map[i][j] === 'player')
-        $(".map").append(`<img id='${i}${j}' src=${arrImg[2]} class='img' alt='player'>`);
+        $(".map").append(`<img id='${i}${j}' src=${arrImg[2]} alt='player' width='50' height='50'>`);
       if (map[i][j] === 'hat' || map[i][j] === 'hole')
-        $(".map").append(`<img id='${i}${j}' src=${arrImg[6]} class='img' alt='quest'>`);
+        $(".map").append(`<img id='${i}${j}' src=${arrImg[6]} alt='quest' width='50' height='50'>`);
     }
     $(".map").append("<br/>");
   }
@@ -90,7 +84,6 @@ GenerateMap();
 // Direction and check win or lose
 function direction(e) {
   if (end) e.keydown(newGame());  // it will start newGame function if win or lose
-  if (inputBox.value) inputBox.value = '';
   if (e.code === 'KeyA') {
     if (y != 0) {
       y -= 1;

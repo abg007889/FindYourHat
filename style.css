@@ -3,49 +3,37 @@
 }
 
 body {
-	background-color: #282828;
+	background-color: rgb(40, 40, 40);
 }
 
-@media only screen and (max-width: 666px) {
-	footer * {
-		display: none;
-	}
-
-	.img {
-		width: 30px;
-		height: 30px;
-	}
-}
-
-@media only screen and (min-width: 666px) {
-	.img {
-		width: 50px;
-		height: 50px;
-	}
-}
-
-@media only screen and (max-height: 750px) {
-	footer * {
-		display: none;
-	}
-}
-
-@media only screen and (min-height: 750px) {
-	footer {
-		background-color: #fffafa;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-column-gap: 10px;
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		padding-top: 5px;
-	}
+footer {
+	background-color: #fffafa;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5px;
 }
 
 a {
 	text-decoration: none;
+}
+
+.panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.map {
+	border: 6px dotted pink;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: #fffafa;
 }
 
 .images {
@@ -63,35 +51,8 @@ a {
 	grid-row-end: 2;
 }
 
-.panel {
+#text {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	margin-top: 30px;
-}
-
-.map {
-	border: 6px dotted pink;
-	border-radius: 20px;
-	padding: 10px;
-	background-color: #fffafa;
-}
-
-#text {
 	color: #fffafa;
-}
-
-#boxBtn {
-	color: #282828;
-	background-color: pink;
-	border-radius: 20px;
-	padding: 3px 6px;
-}
-
-#inputBox {
-	text-align: center;
-	color: #fffafa;
-	background-color: #282828;
-	border-radius: 20px;
-	width: 20px;
 }

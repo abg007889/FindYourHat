@@ -23,7 +23,7 @@ function newGame() {
 
 // Generate the map
 function GenerateMap() {
-  txt.innerHTML = "";
+  txt.innerHTML = "Press 'w','a','s','d' to walk";
   for (let i = 0; i < 10; i++) {
     let mapY = [];
     for (let j = 0; j < 10; j++) {
